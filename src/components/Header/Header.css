@@ -1,0 +1,124 @@
+/* Header.css */
+body {
+    background: linear-gradient(to bottom, #f4e4df, #fdf8f5); /* Hiệu ứng từ hồng nhạt sang kem */
+    min-height: 100vh; /* Đảm bảo nền phủ toàn bộ chiều cao trang */
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, #f4e4df, #f7f1eb);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+    
+  .logo img {
+    height: 50px;
+  }
+  
+  .menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .menu ul li {
+    position: relative;
+    align-items: center;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+    padding: 10px;
+  }
+.menu ul li.active a {
+  color: #000; /* Màu chữ khi được chọn */
+}
+  
+  .menu ul li a:hover {
+    color: #ff6f61; /* Highlight color */
+  }
+  
+  .others {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    background-color: #fff;
+    transition: box-shadow 0.3s;
+  }
+  
+  .search-bar:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+    padding: 5px;
+  }
+  
+  .search-bar input::placeholder {
+    color: #aaa;
+  }
+  
+  .search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }  
+  .search-bar button:hover {
+    color: #ff6f61;
+  }
+    
+  .icon-link {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .icon-link:hover {
+    color: #ff6f61;
+  }
+  .logo,
+  .menu,
+  .others {
+    flex: 1; /* Chia đều không gian cho các phần */
+  }
+  
+  .menu {
+    text-align: center; /* Canh giữa các item trong menu */
+  }
+  
+  .others {
+    display: flex;
+    justify-content: flex-end; /* Đẩy các icon sang bên phải */
+    gap: 5px; /* Khoảng cách giữa các icon */
+  }
+  

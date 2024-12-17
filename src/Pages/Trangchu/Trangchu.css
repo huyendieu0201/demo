@@ -1,0 +1,225 @@
+main {
+    padding: 0px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+.banner img.active {
+    display: block;
+    opacity: 1;
+}
+
+header, main {
+    padding: 0px;
+}
+
+/* Products Section */
+.products {
+  padding: 50px 10px;
+}
+
+/* Best Sellers */
+.best-sellers {
+  margin-top: 40%;
+  text-align: center;
+}
+
+.best-sellers h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.best-sellers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.section-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin: 40px auto 20px;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #aaa;
+    margin: 0 10px;
+}
+
+.section-title span {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+/* Section tổng quan */
+.products {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .products h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .products h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #333;
+    margin: 10px auto 0;
+  }
+  
+/* Lưới sản phẩm */
+.product-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+/* Sản phẩm */
+.product {
+    position: relative;
+    width: calc(25% - 15px);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column !important;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+/* Thông tin sản phẩm */
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 16px;
+    color: #ff6f61;
+    font-weight: bold;
+}
+/* Style mặc định cho nút */
+.btn-view-all {
+    display: inline-block;
+    border: 2px solid #b34a2e;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(179, 74, 46, 0.6); /* Chữ nhạt hơn */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+  
+.btn-view-all:hover {
+    background-color: #b34a2e;
+    color: #fff; /* Chữ đậm khi hover */
+}
+.linkStyle {
+    font-style: italic;
+    color: #c74c2c;
+    text-decoration: none;
+    margin-bottom: 60px;
+    display: block; /* Giúp margin-bottom hoạt động */
+ }
+ .custom-button {
+    background-color: #c74c2c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  
+  .instagram-carousel {
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều ngang khung */
+    overflow-x: scroll; /* Cho phép cuộn ngang */
+    overflow-y: hidden; /* Ẩn cuộn dọc */
+    display: flex; /* Giữ ảnh nằm trong một hàng */
+    scroll-behavior: smooth; /* Cuộn mượt mà */
+    white-space: nowrap; /* Ảnh không xuống dòng */
+  }
+  
+  .instagram-images {
+    display: flex; /* Các ảnh nằm ngang */
+    gap: 0px; /* Khoảng cách giữa các ảnh */
+    width: fit-content; /* Chiều rộng phù hợp với nội dung bên trong */
+  }
+  
+  .instagram-images img {
+    height: 350px; /* Chiều cao ảnh (tùy chỉnh theo giao diện) */
+    width: auto; /* Chiều ngang tự động điều chỉnh */
+    object-fit: cover; /* Ảnh được cắt gọn để giữ tỉ lệ */
+    cursor: pointer;
+    border-radius: 2px; /* Góc bo tròn nếu cần */
+  }
+  
+  /* Ẩn hoàn toàn thanh cuộn dọc */
+  .instagram-carousel::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trên Chrome, Safari */
+  }
+  
+  .instagram-carousel {
+    -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
+    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+  }
+            
+  
+  
+  

@@ -1,0 +1,69 @@
+footer {
+  background-color: #f4e4df; /* Màu nền nhẹ */
+  padding: 20px 40px; /* Tăng chiều cao của footer */
+  font-size: 14px;
+  color: #4e342e; /* Màu chữ phù hợp với logo */
+  border-top: 1px solid #e0e0e0; /* Viền trên nhẹ */
+}
+
+.footer-container {
+  display: flex; /* Chia footer thành 2 phần */
+  justify-content: space-between; /* Đẩy hai phần sang hai bên */
+  align-items: flex-start; /* Căn đỉnh của 2 phần */
+  position: relative; /* Để định vị các phần tử bên trong */
+}
+
+.footer-info {
+  max-width: 50%;
+  text-align: left;
+}
+
+.footer-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-media {
+  max-width: 50%;
+  text-align: right;
+  position: absolute; /* Định vị tuyệt đối */
+  top: 0; /* Đẩy lên trên cùng */
+  right: 0; /* Căn sát bên phải */
+  display: flex; /* Sử dụng flex để căn chỉnh nội dung */
+  flex-direction: column; /* Sắp xếp nội dung thành cột */
+  justify-content: flex-start; /* Đẩy nội dung lên trên */
+}
+
+.footer-media p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.social-media {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-media li {
+  margin: 0 10px;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #007bff;
+}

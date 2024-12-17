@@ -1,0 +1,113 @@
+.Khuyentai-container {
+    display: flex;
+    gap: 0px;
+    margin-top: 0px;
+}
+
+.category-left {
+    background-color: #f2f2f2; /* Màu nền */
+    padding: 40px;
+    border-radius: 5px;
+}
+
+.category-left ul {
+    list-style-type: none; /* Xóa dấu đầu dòng của danh sách */
+    padding: 0;
+}
+
+.category-left ul li a::before {
+    content: "\2665 "; /* Mã Unicode cho ký tự trái tim */
+    color: #333; /* Màu của ký tự */
+    margin-right: 5px; /* Khoảng cách giữa ký tự và nội dung */
+    font-size: 15px; /* Kích thước của ký tự */
+    vertical-align: middle; /* Căn giữa ký tự theo chiều dọc */
+}
+
+.category-left ul li a {
+    text-decoration: none; /* Xóa gạch chân đường link */
+    color: #333; /* Màu chữ */
+    display: block; /* Để link chiếm hết phần mục */
+    padding: 10px 12px; /* Khoảng cách nội dung và biên ngoài của mục */
+    border-radius: 3px; /* Đường viền cong */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+.category-left ul li a:hover {
+    background-color:rgba(222, 184, 135, 0.388)  /* Màu nền khi di chuột vào */
+}
+.category-right {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.category-right-top {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-right-top img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sản phẩm */
+.products {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: none;
+  }
+
+.product-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.product {
+    position: relative;
+    width: calc(25% - 15px);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column ;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product:hover image {
+    transform: scale(1.05);
+}
+
+/* Thông tin sản phẩm */
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 16px;
+    color: #ff6f61;
+    font-weight: bold;
+}

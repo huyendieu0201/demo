@@ -1,0 +1,139 @@
+.product-page {
+    display: flex;
+    gap: 30px;
+    padding: 90px;
+    font-family: Arial, sans-serif;
+    margin-left: 200px; /* Cách lề trái */
+    margin-right: 200px; /* Cách lề trái */
+  }
+  
+  .product-image {
+    width: 60%;
+  }
+  
+  .main-image {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .product-thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .product-thumbnails img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+
+  }
+  
+  .product-details {
+    width: 50%;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .sku,
+  .price-sp {
+    margin: 10px 0;
+    color: #ff5344;
+    font-size: 30px;
+  }
+  
+  .quantity-select {
+    margin: 15px 0;
+    width: 300px; /* Điều chỉnh chiều dài của ô chọn size */
+
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  select,
+  input {
+    width: 60px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gold;
+    margin-top: 5px;
+  }
+  
+  .add-to-cart {
+    background-color: #5f7a85;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .buy-now {
+    background-color: #e7e7e7;
+    color: #aaa;
+    border: none;
+    padding: 10px 20px;
+    cursor: not-allowed;
+    margin-top: 10px;
+  }
+  .product-info-sp {
+    gap : 40px;
+    margin-top: 40px;
+    text-align: left; /* Căn lề trái cho các dòng */
+
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin: 40px auto 20px;
+    background-color:#fdf8f5 ;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #aaa;
+    margin: 0 10px;
+}
+
+.section-title span {
+    display: inline-block;
+    padding: 0 20px;
+}
+/* CSS cho phần hiển thị sản phẩm lướt chuột */
+.products {
+    padding: 20px 0;
+  }
+  
+  .product-item {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  
