@@ -64,6 +64,7 @@ body {
     padding: 5px 10px;
     background-color: #fff;
     transition: box-shadow 0.3s;
+    width: 200px;
   }
   
   .search-bar:hover {
@@ -120,5 +121,6 @@ body {
     display: flex;
     justify-content: flex-end; /* Đẩy các icon sang bên phải */
     gap: 5px; /* Khoảng cách giữa các icon */
+    margin-right: 10px;
   }
   

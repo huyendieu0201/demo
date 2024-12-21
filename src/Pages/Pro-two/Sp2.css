@@ -67,14 +67,58 @@
     font-size: 14px;
   }
   
-  .color-circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: gold;
-    margin-top: 5px;
+  .color-select-sp {
+    display: flex;
+    flex-direction: column; /* Đặt các phần tử theo chiều dọc */
+    align-items: flex-start; /* Căn chỉnh phần tử ở phía bên trái */
+    gap: 5px; /* Khoảng cách giữa nhãn và các vòng tròn */
+    margin: 15px 0;
   }
   
+  .color-select-sp label {
+    font-weight: bold;
+    margin-bottom: 10px; /* Khoảng cách giữa nhãn và các vòng tròn */
+  }
+  
+  .color-circle-container {
+    display: flex; /* Sắp xếp các vòng tròn theo chiều ngang */
+    gap: 5px; /* Khoảng cách giữa các vòng tròn */
+  }
+  
+  .color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ddd; /* Viền nhẹ cho vòng tròn */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng hover */
+    position: relative; /* Để có thể thêm dấu tích vào vị trí cố định */
+    cursor: pointer;
+  }
+  
+  .color-circle.gold {
+    background-color: gold; /* Màu vàng */
+  }
+  
+  .color-circle.silver {
+    background-color: silver; /* Màu bạc */
+  }
+  
+  .color-circle:hover {
+    transform: scale(1.2); /* Phóng to vòng tròn khi hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bóng đổ khi hover */
+  }
+  
+  .color-circle.selected::after {
+    content: '✔'; /* Dấu tích */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa dấu tích */
+    font-size: 18px;
+    color: white; /* Màu dấu tích */
+  }
+    
+
   .add-to-cart {
     background-color: #5f7a85;
     color: white;

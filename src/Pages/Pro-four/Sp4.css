@@ -1,135 +1,212 @@
 .product-page {
-    display: flex;
-    gap: 30px;
-    padding: 90px;
-    font-family: Arial, sans-serif;
-    margin-left: 200px; /* Cách lề trái */
-    margin-right: 200px; /* Cách lề trái */
-  }
-  
-  .product-image {
-    width: 60%;
-  }
-  
-  .main-image {
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .product-thumbnails {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .product-thumbnails img {
-    width: 50px;
-    height: 50px;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    border-radius: 5px;
+  display: flex;
+  gap: 30px;
+  padding: 90px;
+  font-family: Arial, sans-serif;
+  margin-left: 200px; /* Cách lề trái */
+  margin-right: 200px; /* Cách lề trái */
+}
 
-  }
-  
-  .product-details {
-    width: 50%;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .sku,
-  .price-sp {
-    margin: 10px 0;
-    color: #ff5344;
-    font-size: 30px;
-  }
-  
-  .size-select,
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  select,
-  input {
-    width: 60px;
-    padding: 5px;
-    font-size: 14px;
-  }
-  
-  .color-circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: gold;
-    margin-top: 5px;
-  }
-  
-  .add-to-cart {
-    background-color: #5f7a85;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .buy-now {
-    background-color: #e7e7e7;
-    color: #aaa;
-    border: none;
-    padding: 10px 20px;
-    cursor: not-allowed;
-    margin-top: 10px;
-  }
-  .product-info-sp {
-    gap : 40px;
-    margin-top: 40px;
-    text-align: left; /* Căn lề trái cho các dòng */
+.product-image {
+  width: 60%;
+}
 
-  }
-  .section-title {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-size: 24px;
-    color: #333;
-    margin: 40px auto 20px;
-    background-color:#fdf8f5 ;
+.main-image {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.product-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.product-thumbnails img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Thêm hiệu ứng cho viền */
+}
+
+.product-thumbnails img:hover {
+  transform: scale(1.1); /* Phóng to hình ảnh khi di chuột */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ nhẹ */
+  border: 2px solid silver; /* Thêm viền màu vàng khi chạm vào */
+}
+
+.product-details {
+  width: 50%;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.sku,
+.price-sp {
+  margin: 10px 0;
+  color: #ff5344;
+  font-size: 30px;
+}
+
+.size-select,
+.color-select,
+.quantity-select {
+  margin: 15px 0;
+  width: 300px; /* Điều chỉnh chiều dài của ô chọn size */
+  position: relative;
+}
+
+.size-select select,
+.color-select select,
+.quantity-select select {
+  width: 100%; /* Chiều rộng đầy đủ của ô chọn */
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px; /* Bo góc */
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng khi tương tác */
+  background-color: #f9f9f9; /* Màu nền cho ô chọn */
+}
+
+.size-select select:focus,
+.color-select select:focus,
+.quantity-select select:focus {
+  transform: scale(1.05); /* Phóng to ô chọn khi được focus */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ khi focus */
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333; /* Màu chữ cho label */
+  transition: color 0.3s ease; /* Thêm hiệu ứng cho màu chữ */
+}
+
+label:hover {
+  color: #5f7a85; /* Màu chữ thay đổi khi hover */
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Thêm hiệu ứng khi tương tác */
+}
+
+.color-circle-sp4 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: silver;
+  margin-top: 5px;
+  border: 2px solid #ddd; /* Thêm viền nhẹ cho vòng tròn màu */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-circle-.color-circle-sp4 {
+  transform: scale(1.2); /* Phóng to vòng tròn khi hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ cho vòng tròn khi hover */
+}
+
+
+.add-to-cart {
+  background-color: #5f7a85;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px; /* Bo góc để mềm mại hơn */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+.add-to-cart:hover {
+  background-color: #4a6170; /* Màu nền thay đổi khi di chuột qua */
+  transform: scale(1.05); /* Phóng to nút khi hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ nhẹ khi hover */
+}
+
+.add-to-cart:active {
+  transform: scale(1); /* Nút sẽ trở lại kích thước ban đầu khi nhấn */
+}
+
+.buy-now {
+  background-color: #e7e7e7;
+  color: #aaa;
+  border: none;
+  padding: 10px 20px;
+  cursor: not-allowed;
+  margin-top: 10px;
+  border-radius: 5px; /* Bo góc để mềm mại hơn */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Thêm hiệu ứng cho màu */
+}
+
+.buy-now:hover {
+  background-color: #d1d1d1; /* Màu nền thay đổi khi hover */
+  color: #666; /* Màu chữ thay đổi khi hover */
+}
+
+.product-info-sp {
+  gap : 40px;
+  margin-top: 40px;
+  text-align: left; /* Căn lề trái cho các dòng */
+
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .section-title::before,
 .section-title::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid #aaa;
-    margin: 0 10px;
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #5f7a85; /* Đường viền màu nhẹ */
+  margin: 0 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ cho các đường viền */
 }
 
 .section-title span {
-    display: inline-block;
-    padding: 0 20px;
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 24px; /* Tăng kích thước chữ */
+  font-weight: 600; /* Chữ đậm nhẹ */
+  color: #333; /* Màu chữ tối để nổi bật */
+  position: relative;
+  z-index: 1; /* Đảm bảo chữ nằm trên các đường viền */
 }
+
+
 /* CSS cho phần hiển thị sản phẩm lướt chuột */
-.products {
-    padding: 20px 0;
-  }
-  
-  .product-item {
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .product-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  
+.sp-products .slick-track {
+  display: flex;
+  gap: 1px; /* Khoảng cách giữa các slide */
+}
+.sp-products {
+  padding: 0 5px; /* Khoảng cách giữa carousel và hai bên container */
+}
+
+.slick-list {
+  margin: 0 -5px; /* Đảm bảo toàn bộ slide không bị tràn container */
+}
+
+.slick-slide {
+  padding: 0 5px; /* Tạo khoảng cách giữa các slide */
+}

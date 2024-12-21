@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
+import Slider from "react-slick"; // Import react-slick
 import './Sp2.css'; // File CSS đi kèm
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Sp2() {
-  const [mainImage, setMainImage] = useState('/sp/sp 2.jpg'); // Đặt ảnh mặc định
-  const [quantity, setQuantity] = useState(1); // Khai báo state cho số lượng
-
-  const products = [
-    { id: 6, title: 'De Coco Narin', price: "90.000 đ", img: '/sp/sp 6.jpg', link: '/product/6' },
-    { id: 3, title: "De Coco Peti", price: "100.000 đ", img: '/sp/sp 3.jpg', link: '/product/3' },
-    { id: 4, title: "De Coco Mori", price: "80.000 đ", img: '/sp/sp 4.jpg', link: '/product/4' },
-    { id: 5, title: "De Coco Starfish", price: "70.000 đ", img: '/sp/sp 5.jpg', link: '/product/5' },
-  ];
+  const [quantity, setQuantity] = useState(1);
+  const [mainImage, setMainImage] = useState('/sp/sp 2.jpg');
 
   const handleThumbnailClick = (imageSrc) => {
     setMainImage(imageSrc); // Cập nhật ảnh chính khi click vào thumbnail
@@ -20,14 +16,63 @@ function Sp2() {
     const value = parseInt(e.target.value, 10);
     setQuantity(value > 0 ? value : 1); // Đảm bảo số lượng >= 1
   };
+  const [selectedColor, setSelectedColor] = useState(null);
 
+  const handleColorSelect = (color) => {
+    setSelectedColor(color);
+  };
+  const products = [
+    { id: 1, title: "De Coco Embrace", price: "100.000 đ", img: '/sp/sp 1.jpg', link: '/product/1' },
+    { id: 3, title: "De Coco Peti", price: "100.000 đ", img: '/sp/sp 3.jpg', link: '/product/3' },
+    { id: 4, title: "De Coco Mori", price: "80.000 đ", img: '/sp/sp 4.jpg', link: '/product/4' },
+    { id: 5, title: "De Coco Starfish", price: "70.000 đ", img: '/sp/sp 5.jpg', link: '/product/5' },
+    { id: 6, title: "De Coco Lalin", price: "90.000 đ", img: '/sp/sp 6.jpg', link: '/product/6' },
+    { id: 7, title: "De Coco ACC J'adore", price: "60.000 đ", img: '/sp/sp 7.jpg', link: '/product/7' },
+  ];
+
+  // Cài đặt cho carousel
+  const carouselSettings = {
+    autoplay: true,
+    autoplaySpeed: 2000,
+    infinite: true,
+    speed: 500, // Tốc độ chuyển đổi (ms)
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024, // Với màn hình <= 1024px
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768, // Với màn hình <= 768px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480, // Với màn hình <= 480px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+  
   return (
     <main>
       <section className="page">
         <div className="product-page">
           <div className="product-image">
             <img
-              src={mainImage} // Sử dụng ảnh chính từ state
+              src={mainImage}
               alt="Product"
               className="main-image"
             />
@@ -55,7 +100,21 @@ function Sp2() {
 
           <div className="product-details">
             <h1>De Coco Rachel</h1>
-            <p className="price">100.000 đ</p>
+            <p className="price">100.000đ</p>
+
+            <div className="color-select-sp">
+              <label>Color:</label>
+              <div className="color-circle-container">
+                <div
+                  className={`color-circle gold ${selectedColor === 'gold' ? 'selected' : ''}`}
+                  onClick={() => handleColorSelect('gold')}
+                ></div>
+                <div
+                  className={`color-circle silver ${selectedColor === 'silver' ? 'selected' : ''}`}
+                  onClick={() => handleColorSelect('silver')}
+                ></div>
+              </div>
+            </div>
 
             <div className="quantity-select">
               <label>Quantity</label>
@@ -89,11 +148,12 @@ function Sp2() {
         </div>
       </section>
 
-      <section className="products">
-        <div className="section-title" style={{ margin: "0 auto", width: "80%" }}>
+      <div className="section-title" style={{ margin: "0 auto", width: "80%" }}>
           <span>Bạn có thể thích</span>
         </div>
-        <div className="product-grid">
+
+      <section className="sp-products">
+        <Slider {...carouselSettings}>
           {products.map((product) => (
             <div key={product.id} className="product">
               <a href={product.link}>
@@ -105,7 +165,7 @@ function Sp2() {
               </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </section>
     </main>
   );
