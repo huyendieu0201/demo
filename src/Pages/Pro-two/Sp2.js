@@ -27,7 +27,7 @@ function Sp2() {
     { id: 4, title: "De Coco Mori", price: "80.000 đ", img: '/sp/sp 4.jpg', link: '/product/4' },
     { id: 5, title: "De Coco Starfish", price: "70.000 đ", img: '/sp/sp 5.jpg', link: '/product/5' },
     { id: 6, title: "De Coco Lalin", price: "90.000 đ", img: '/sp/sp 6.jpg', link: '/product/6' },
-    { id: 7, title: "De Coco ACC J'adore", price: "60.000 đ", img: '/sp/sp 7.jpg', link: '/product/7' },
+    { id: 8, title: "De Coco ACC J'adore", price: "60.000 đ", img: '/sp/sp 8.jpg', link: '/product/8' },
   ];
 
   // Cài đặt cho carousel
