@@ -16,7 +16,7 @@ const Footer = () => {
           <p>Hộ kinh doanh Phan Văn Tú</p>
           <p>Địa chỉ: 115B, Phố Bà Triệu, phường Nguyễn Du, quận Hai Bà Trưng, thành phố Hà Nội</p>
           <p>Điện thoại: 0348268094</p>
-          <p>Email: decocoaccessories@gmail.com</p>
+          <p>Email: nguyenthihuyendieu0201@gmail.com</p>
           <p>Giấy chứng nhận đăng ký Hộ kinh doanh do Phòng Tài chính - Kế hoạch Uỷ ban Nhân dân quận Hai Bà Trưng cấp lần đầu ngày 11/7/2018. Mã ĐKKD: 01D8035465</p>
         </div>
 
